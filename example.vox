@@ -1,0 +1,20 @@
+
+candidates = ["Bill", "Bob", "Janet"]
+
+divisions("Class Election 2017"){
+
+    "6A" {
+        voting = "fptp"
+        victory = "plurality"
+    }
+
+    "6B" {
+        voting = "irv"
+        victory = "plurality"
+    }
+
+    "6C" {
+        voting = "schultz"
+        victory = "plurality"
+    }
+}

@@ -3,11 +3,15 @@ alias name = "[A-Za-z0-9_]+"
 alias votingTypes = "single"
 alias victoryTypes = "majority"
 
+title : string
+
 alias divisions = divisions(string){
     divisions
-}
-
-name {
+    <0:name> {
+        voting : votingTypes
+        victory : victoryTypes
+        short : [string]
+    }
     simulate {
         votes {
             vote {
@@ -15,8 +19,9 @@ name {
             }
         }
     }
-    candidates : [string]
-    voting : votingTypes
-    victory : victoryTypes
+}
+
+name {
+    
     divisions
 }
