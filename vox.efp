@@ -1,0 +1,22 @@
+
+alias name = "[A-Za-z0-9_]+"
+alias votingTypes = "single"
+alias victoryTypes = "majority"
+
+alias divisions = divisions(string){
+    divisions
+}
+
+name {
+    simulate {
+        votes {
+            vote {
+                candidate
+            }
+        }
+    }
+    candidates : [string]
+    voting : votingTypes
+    victory : victoryTypes
+    divisions
+}
